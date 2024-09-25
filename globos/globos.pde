@@ -1,8 +1,14 @@
+PImage payaso;
+
+
+
 class Globo
 {
   float x, y,vx,vy;
-  Globo (float _x, float _y)
+  PImage fondo;
+  Globo (PImage img,float _x, float _y)
   {
+  fondo=img;
    x=_x;
    y=_y; 
    vx=random(-0.25,0.25);
@@ -19,6 +25,8 @@ class Globo
   {
       ellipse(x,y,70,130);
       line(x,y+65,x,y+100);
+      imageMode(CENTER);
+      image(fondo,x,y,70,130);
   }
   
 }
@@ -30,6 +38,7 @@ void setup()
 {
   size(640,480);
   globos = new ArrayList<Globo>();  
+  payaso = loadImage("payaso.png");
 }
 
 void draw()
@@ -44,5 +53,5 @@ void draw()
 
 void mousePressed()
 {
-  globos.add(new Globo(mouseX,mouseY));
+  globos.add(new Globo(payaso,mouseX,mouseY));
 }
