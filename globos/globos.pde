@@ -36,7 +36,7 @@ ArrayList<Globo> globos;
 
 void setup()
 {
-  size(640,480);
+  size(640,640);
   globos = new ArrayList<Globo>();  
   payaso = loadImage("payaso.png");
 }
