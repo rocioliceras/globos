@@ -1,4 +1,5 @@
 PImage payaso;
+PImage circo;
 
 class Globo
 {
@@ -21,10 +22,10 @@ class Globo
 
   void dibujate()
   {
-      ellipse(x,y,70,130);
-      line(x,y+65,x,y+100);
+      //ellipse(x,y,70,130);
+      line(x,y+50,x,y+80);
       imageMode(CENTER);
-      image(fondo,x,y,70,130);
+      image(fondo,x,y,100,100);
   }
   
 }
@@ -34,22 +35,22 @@ ArrayList<Globo> globos;
 
 void setup()
 {
-  size(640,480);
+  size(701,480);
   globos = new ArrayList<Globo>();  
   payaso = loadImage("payaso.png");
   
-  PImage circo;
   circo = loadImage("circo.jpg");
   image(circo,0,0);
 }
 
 void draw()
 {
-  //background(20,100,100);
+  background(circo);
   for(int i=0;i<globos.size();i++)
   {
     globos.get(i).update();
     globos.get(i).dibujate();
+    
   }
 }
 
