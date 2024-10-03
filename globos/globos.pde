@@ -23,7 +23,7 @@ class Globo
 
   void dibujate()
   {
-      ellipse(x,y,70,130);
+      ellipse(x,y,105,145);
       line(x,y+65,x,y+100);
       imageMode(CENTER);
       image(fondo,x,y,70,130);
