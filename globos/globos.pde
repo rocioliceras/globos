@@ -22,6 +22,7 @@ class Globo
 
   void dibujate()
   {
+
       //ellipse(x,y,70,130);
       line(x,y+50,x,y+80);
       imageMode(CENTER);
@@ -35,7 +36,9 @@ ArrayList<Globo> globos;
 
 void setup()
 {
+
   size(701,480);
+
   globos = new ArrayList<Globo>();  
   payaso = loadImage("payaso.png");
   
