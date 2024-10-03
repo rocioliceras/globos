@@ -1,7 +1,5 @@
 PImage payaso;
 
-
-
 class Globo
 {
   float x, y,vx,vy;
@@ -39,11 +37,15 @@ void setup()
   size(640,480);
   globos = new ArrayList<Globo>();  
   payaso = loadImage("payaso.png");
+  
+  PImage circo;
+  circo = loadImage("circo.jpg");
+  image(circo,0,0);
 }
 
 void draw()
 {
-  background(20,100,100);
+  //background(20,100,100);
   for(int i=0;i<globos.size();i++)
   {
     globos.get(i).update();
